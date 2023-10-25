@@ -1,0 +1,14 @@
+﻿@model List<YoutubeVideoModel>
+<main>
+    <h1>Videos de YouTube</h1>
+
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li>
+                <h3>@item.Title</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/@item.VideoId" frameborder="0" allowfullscreen></iframe>
+            </li>
+        }
+    </ul>
+</main>
